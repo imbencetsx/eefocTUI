@@ -1,0 +1,20 @@
+[package]
+name = "eefoctui"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ratatui = "0.30"
+crossterm = "0.29"
+tokio = { version = "1.39", features = ["full"] }
+bollard = { version = "0.20", features = ["ssl"] }
+sysinfo = "0.37"
+serde = { version = "1.0", features = ["derive"] }
+toml = "0.8"
+anyhow = "1.0"
+thiserror = "1.0"
+strip-ansi-escapes = "0.2.1"
+ansi-parser = "0.9"
+
+[target.'cfg(unix)'.dependencies]
+portable-pty = "0.9"
